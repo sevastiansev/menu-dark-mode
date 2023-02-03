@@ -1,7 +1,7 @@
 const btnMenu = document.getElementById("btn-menu");
 let headerMenu = document.querySelector(".box-menu");
 let btnTheme = document.querySelector(".btn-theme");
-
+let links = document.querySelectorAll(".link-item");
 
 
 function toggleMenu(){
@@ -24,3 +24,7 @@ function changeTheme(){
 
 btnMenu.addEventListener("click",toggleMenu)
 btnTheme.addEventListener("click",changeTheme)
+
+links.forEach((link)=>{
+    link.addEventListener("click",toggleMenu)
+});

@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-body: rgb(254, 254, 254);
+    --bg-body: rgb(248, 248, 248);
     --bg-btn-theme:rgb(250, 250, 250);
     --color-icon:rgb(183, 182, 182);
     --bg-icon:rgb(248, 247, 247);
@@ -104,7 +104,7 @@ body.theme-dark{
     background: rgb(0, 0, 0, 0.5);
 }
 .box-menu.active{
-    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     transition: all .3s ease;
 }
 .header-menu{
@@ -118,7 +118,7 @@ body.theme-dark{
 .header-menu .list-item{
     margin-top: 75px;
 }
-.list-item .itme-list{
+.list-item .item-list{
     width: 100%;
     list-style: none;
 }
@@ -134,7 +134,7 @@ body.theme-dark{
     text-transform: capitalize;
     color: var(--color-link);
 }
-.list-item .btn-darkmode{
+.btn-darkmode{
     width: 100%;
     padding: 0 1em;
     padding-bottom: 0.7em;
@@ -144,7 +144,7 @@ body.theme-dark{
     gap: 1.5em;
 }
 .btn-theme{
-    display: inline-flex;
+    display: flex;
     padding: .898em 2.3em;
     background: var(--bg-btn-theme);
     position: relative;
@@ -152,7 +152,8 @@ body.theme-dark{
     cursor: pointer;
 }
 .btn-darkmode .text-menu{
-    font-size:0.888em;
+    font-size:12px;
+    text-align: center;
     text-transform: capitalize;
     font-weight: 400;
     color: var(--color-link);
@@ -177,4 +178,137 @@ body.theme-dark{
     border-radius: 50%;
     position: absolute;
     background-color: var(--bg-main);
+}
+
+@media (min-width:800px){
+    .btn-menu{
+        display: none;
+    }
+    
+    .box-menu{
+        max-width: 75%;
+        min-height:auto;
+        position: relative;
+        clip-path: none;
+        transition: all .3s ease;
+        top: 0;
+        left: 0;
+        background: none;
+    }
+    .btn-darkmode{
+        width: 150%;
+        padding: 0em;
+        padding-bottom: 0em;
+        display: inline-flex;
+        gap: 1em;
+    }
+    .btn-theme{
+        width: auto;
+        display: flex;
+        align-items: center;
+        padding: .898em 2.3em;
+        background: var(--bg-btn-theme);
+        position: relative;
+        border-radius: 35px;
+        cursor: pointer;
+    }
+    .header-menu{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: none;
+    }
+    .header-menu .list-item{
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .item-list{
+        width: 100%;
+        display: flex;
+        list-style:none;
+    }
+    .link-item{
+        display: block;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+        padding: 0 0em;
+        margin: 0 1em;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: var(--color-link);
+    }
+}
+@media (min-width:1200px){
+    .btn-menu{
+        display: none;
+    }
+    
+    .box-menu{
+        max-width: 70%;
+        min-height:auto;
+        position: relative;
+        clip-path: none;
+        transition: all .3s ease;
+        top: 0;
+        left: 0;
+        background: none;
+    }
+    .btn-darkmode{
+        width: 100%;
+        padding: 0em;
+        padding-bottom: 0em;
+        display: inline-flex;
+        gap: 1em;
+    }
+    .btn-theme{
+        width: auto;
+        display: flex;
+        align-items: center;
+        padding: .898em 2.3em;
+        background: var(--bg-btn-theme);
+        position: relative;
+        border-radius: 35px;
+        cursor: pointer;
+    }
+    .header-menu{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: none;
+    }
+    .header-menu .list-item{
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .item-list{
+        width: 100%;
+        display: flex;
+        list-style:none;
+    }
+    .link-item{
+        display: block;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+        padding: 0 0em;
+        margin: 0 1em;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: var(--color-link);
+    }
 }
